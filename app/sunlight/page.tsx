@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { SunlightChart } from "@/components/sunlight-chart"
-import { SunlightHistory } from "@/components/sunlight-history"
+import { SunlightChart } from "@/components/sunlight/sunlight-chart"
+import { SunlightHistory } from "@/components/sunlight/sunlight-history"
 import { Button } from "@/components/ui/button"
-import { CalendarDateRangePicker } from "@/components/date-range-picker"
+import { CalendarDateRangePicker } from "@/components/shared/date-range-picker"
 import { Badge } from "@/components/ui/badge"
 import { Sun, Sunset, AlertTriangle, Cloud } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -163,7 +163,7 @@ export default function SunlightPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">8-10h</div>
-                  <Badge variant="outline">Actual: 8.2h</Badge>
+                  <Badge variant="secondary">Actual: 8.2h</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
@@ -183,7 +183,7 @@ export default function SunlightPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">6-8h</div>
-                  <Badge variant="outline">Actual: 7.8h</Badge>
+                  <Badge variant="secondary">Actual: 7.8h</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
@@ -193,7 +193,7 @@ export default function SunlightPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">4-6h</div>
-                  <Badge variant="outline">Actual: 6.5h</Badge>
+                  <Badge variant="secondary">Actual: 6.5h</Badge>
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@ export default function SunlightPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">6.8</div>
-                  <Badge variant="warning">Moderado</Badge>
+                  <Badge variant="destructive">Moderado</Badge>
                 </div>
               </div>
             </div>

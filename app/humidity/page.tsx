@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { HumidityChart } from "@/components/humidity-chart"
-import { HumidityHistory } from "@/components/humidity-history"
+import { HumidityChart } from "@/components/humidity/humidity-chart"
+import { HumidityHistory } from "@/components/humidity/humidity-history"
 import { Button } from "@/components/ui/button"
-import { CalendarDateRangePicker } from "@/components/date-range-picker"
+import { CalendarDateRangePicker } from "@/components/shared/date-range-picker"
 import { Badge } from "@/components/ui/badge"
 import { Droplets, Wind, AlertTriangle, Thermometer } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -165,7 +165,7 @@ export default function HumidityPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">65-80%</div>
-                  <Badge variant="outline">Actual: 75%</Badge>
+                  <Badge variant="secondary">Actual: 75%</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
@@ -175,7 +175,7 @@ export default function HumidityPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">60-70%</div>
-                  <Badge variant="outline">Actual: 65%</Badge>
+                  <Badge variant="secondary">Actual: 65%</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
@@ -195,7 +195,7 @@ export default function HumidityPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">60-75%</div>
-                  <Badge variant="outline">Actual: 70%</Badge>
+                  <Badge variant="secondary">Actual: 70%</Badge>
                 </div>
               </div>
             </div>
@@ -245,7 +245,7 @@ export default function HumidityPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">2 días</div>
-                  <Badge variant="outline">Programado</Badge>
+                  <Badge variant="secondary">Programado</Badge>
                 </div>
               </div>
             </div>

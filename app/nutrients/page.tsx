@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { NutrientChart } from "@/components/nutrient-chart"
-import { NutrientHistory } from "@/components/nutrient-history"
+import { NutrientChart } from "@/components/nutrients/nutrient-chart"
+import { NutrientHistory } from "@/components/nutrients/nutrient-history"
 import { Button } from "@/components/ui/button"
-import { CalendarDateRangePicker } from "@/components/date-range-picker"
+import { CalendarDateRangePicker } from "@/components/shared/date-range-picker"
 import { Badge } from "@/components/ui/badge"
 import { Sprout, AlertTriangle, FlaskRoundIcon as Flask, Droplets } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -129,7 +129,7 @@ export default function NutrientsPage() {
                   <div className="space-y-0.5">
                     <div className="text-sm font-medium">Zone B</div>
                   </div>
-                  <Badge variant="warning">Atención</Badge>
+                  <Badge variant="destructive">Atención</Badge>
                 </div>
                 <div className="space-y-2">
                   <div className="text-xs text-muted-foreground">Nitrogen (N)</div>
@@ -193,7 +193,7 @@ export default function NutrientsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">Próxima Semana</div>
-                  <Badge variant="outline">Pendiente</Badge>
+                  <Badge variant="secondary">Pendiente</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
@@ -222,7 +222,7 @@ export default function NutrientsPage() {
                     <div className="text-sm font-medium">Tomatoes</div>
                     <div className="text-xs text-muted-foreground">Zone A</div>
                   </div>
-                  <Badge variant="outline">Cumpliendo Necesidades</Badge>
+                  <Badge variant="secondary">Cumpliendo Necesidades</Badge>
                 </div>
                 <div className="space-y-1">
                   <div className="text-xs">N: 150-200 ppm</div>
@@ -236,7 +236,7 @@ export default function NutrientsPage() {
                     <div className="text-sm font-medium">Lettuce</div>
                     <div className="text-xs text-muted-foreground">Zone B</div>
                   </div>
-                  <Badge variant="warning">Necesita Atención</Badge>
+                  <Badge variant="destructive">Necesita Atención</Badge>
                 </div>
                 <div className="space-y-1">
                   <div className="text-xs">N: 100-150 ppm</div>

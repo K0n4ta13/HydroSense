@@ -2,7 +2,7 @@ import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { cn } from "@/lib/utils"
-import { MainNav } from "@/components/main-nav"
+import { MainNav } from "@/components/shared/main-nav"
 
 const inter = Inter({ subsets: ["latin"] })
 

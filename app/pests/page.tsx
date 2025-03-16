@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { PestChart } from "@/components/pest-chart"
-import { PestHistory } from "@/components/pest-history"
+import { PestChart } from "@/components/pests/pest-chart"
+import { PestHistory } from "@/components/pests/pest-history"
 import { Button } from "@/components/ui/button"
-import { CalendarDateRangePicker } from "@/components/date-range-picker"
+import { CalendarDateRangePicker } from "@/components/shared/date-range-picker"
 import { Badge } from "@/components/ui/badge"
 import { Bug, AlertTriangle, SprayCanIcon as Spray, Shield } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -115,7 +115,7 @@ export default function PestPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">Infestación Baja</div>
-                  <Badge variant="warning">En Tratamiento</Badge>
+                  <Badge variant="destructive">En Tratamiento</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
@@ -175,7 +175,7 @@ export default function PestPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">En 3 días</div>
-                  <Badge variant="outline">Pendiente</Badge>
+                  <Badge variant="secondary">Pendiente</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
@@ -185,7 +185,7 @@ export default function PestPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium">Próxima Semana</div>
-                  <Badge variant="outline">Programado</Badge>
+                  <Badge variant="secondary">Programado</Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
