@@ -1,4 +1,6 @@
 "use client"
+
+import { usePathname } from "next/navigation"
 import { GalleryVerticalEnd, Droplets, ThermometerSun, Gauge, Sun, Cloud, Bug, Sprout, PieChart } from "lucide-react"
 import {
   Sidebar,
@@ -68,6 +70,8 @@ const navigation = [
 ]
 
 export function MainNav() {
+  const pathname = usePathname()
+  
   return (
     <SidebarProvider className="w-auto">
       <Sidebar>
@@ -79,7 +83,7 @@ export function MainNav() {
                   <GalleryVerticalEnd className="h-4 w-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">AgriDash</span>
+                  <span className="font-semibold">HydroSense</span>
                   <span className="text-xs">Sistema de Monitoreo</span>
                 </div>
               </SidebarMenuButton>
@@ -92,7 +96,7 @@ export function MainNav() {
               {navigation.map((item) =>
                 !item.items ? (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={item.isActive}>
+                    <SidebarMenuButton asChild isActive={pathname === item.url}>
                       <a href={item.url}>
                         {item.icon}
                         {item.title}
@@ -106,7 +110,7 @@ export function MainNav() {
                       <SidebarMenu>
                         {item.items.map((subItem) => (
                           <SidebarMenuItem key={subItem.title}>
-                            <SidebarMenuButton asChild>
+                            <SidebarMenuButton asChild isActive={pathname === subItem.url}>
                               <a href={subItem.url}>
                                 {subItem.icon}
                                 {subItem.title}
